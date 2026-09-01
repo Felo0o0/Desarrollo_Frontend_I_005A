@@ -1,0 +1,219 @@
+* {
+    box-sizing: border-box;
+}
+ 
+body {
+    font-family: 'EB Garamond', Georgia, serif;
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 0 24px 60px;
+    background-color: #14110e;
+    background-image:
+        radial-gradient(circle at 50% 0%, rgba(201,129,42,0.08), transparent 60%);
+    color: #d8d2c4;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+ 
+/* ---------- Header: el altar de la hoguera ---------- */
+header {
+    background: linear-gradient(180deg, #211c17 0%, #14110e 100%);
+    color: #d8d2c4;
+    padding: 48px 30px 28px;
+    margin: 0 -24px 30px;
+    border-bottom: 1px solid #6b1e23;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+    text-align: center;
+}
+ 
+header h1 {
+    font-family: 'Cinzel', serif;
+    margin: 0 0 10px;
+    font-size: 2.6rem;
+    letter-spacing: 2px;
+    color: #c9812a;
+    text-shadow: 0 0 12px rgba(201,129,42,0.5), 0 2px 2px #000;
+}
+ 
+header p {
+    font-style: italic;
+    color: #9a9184;
+    margin: 0 0 20px;
+}
+ 
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 14px 0 0;
+    margin: 0;
+    border-top: 1px solid #3a3128;
+}
+ 
+nav ul li a {
+    color: #c9812a;
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: color 0.25s ease, text-shadow 0.25s ease;
+}
+ 
+nav ul li a:hover {
+    color: #f0b35c;
+    text-shadow: 0 0 8px rgba(201,129,42,0.7);
+}
+ 
+/* ---------- Encabezados de sección ---------- */
+h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    color: #c9812a;
+    border-left: 3px solid #6b1e23;
+    padding-left: 14px;
+    margin-top: 40px;
+}
+ 
+h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.05rem;
+    color: #e8e2d4;
+    letter-spacing: 0.5px;
+}
+ 
+/* ---------- Productos: lápidas ---------- */
+section#productos ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+ 
+section#productos li {
+    background-color: #201b16;
+    border: 1px solid #3a3128;
+    border-top: 2px solid #c9812a;
+    padding: 18px;
+    margin: 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+ 
+section#productos li:hover {
+    transform: translateY(-4px);
+    border-color: #c9812a;
+    box-shadow: 0 8px 22px rgba(201,129,42,0.25);
+}
+ 
+.producto-img {
+    width: 100%;
+    height: 160px;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 12px;
+    filter: sepia(15%) contrast(105%);
+}
+ 
+section#productos p {
+    color: #a89e8d;
+    font-size: 0.95rem;
+}
+ 
+/* ---------- Categorías: runas ---------- */
+section#categorias ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+ 
+section#categorias li {
+    border: 1px solid #3a3128;
+    padding: 10px 18px;
+    background-color: #1c1712;
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    color: #b8ae9c;
+}
+ 
+/* selector avanzado: nth-child alterna tono como piedra desgastada */
+section#categorias li:nth-child(odd) {
+    background-color: #241c15;
+    border-color: #6b1e23;
+    color: #d8b98a;
+}
+ 
+/* ---------- Footer: cripta ---------- */
+footer {
+    background: linear-gradient(0deg, #14110e 0%, #211c17 100%);
+    color: #9a9184;
+    padding: 26px 30px;
+    margin: 40px -24px 0;
+    border-top: 1px solid #6b1e23;
+}
+ 
+footer h2 {
+    color: #c9812a;
+}
+ 
+footer a {
+    color: #c9812a;
+    text-decoration: none;
+}
+ 
+footer a:hover {
+    color: #f0b35c;
+}
+
+/* ---------- Diseño responsivo ---------- */
+
+/* Tablet: navbar en columna, productos en 2 columnas, 2 categorías por fila */
+@media (max-width: 900px) {
+    nav ul {
+        flex-wrap: wrap;
+        gap: 16px 24px;
+    }
+
+    section#productos ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    section#categorias ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Móvil: una sola columna y espaciados/tipografía reducidos */
+@media (max-width: 600px) {
+    body {
+        padding: 0 16px 40px;
+        font-size: 1rem;
+    }
+
+    header {
+        padding: 36px 20px 22px;
+        margin: 0 -16px 24px;
+    }
+
+    header h1 {
+        font-size: 1.9rem;
+    }
+
+    footer {
+        padding: 22px 20px;
+        margin: 32px -16px 0;
+    }
+
+    section#productos ul,
+    section#categorias ul {
+        grid-template-columns: 1fr;
+    }
+}
