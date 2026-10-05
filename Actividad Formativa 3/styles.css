@@ -1,0 +1,137 @@
+/* =========================================
+   BonfireRest — tema aplicado sobre Bootstrap 5
+   Mismos colores y tipografías desde la Semana 3.
+   ========================================= */
+
+body {
+    font-family: 'EB Garamond', Georgia, serif;
+    background-color: #14110e;
+    background-image:
+        radial-gradient(circle at 50% 0%, rgba(201,129,42,0.08), transparent 60%);
+    color: #d8d2c4;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+    background: linear-gradient(180deg, #211c17 0%, #14110e 100%) !important;
+    border-bottom: 1px solid #6b1e23;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+.navbar-brand {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 2px;
+    color: #c9812a !important;
+    text-shadow: 0 0 12px rgba(201,129,42,0.5), 0 2px 2px #000;
+}
+
+/* ---------- Encabezados de sección ---------- */
+h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    color: #c9812a;
+    border-left: 3px solid #6b1e23;
+    padding-left: 14px;
+}
+
+.card-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.05rem;
+    color: #e8e2d4;
+    letter-spacing: 0.5px;
+}
+
+/* ---------- Productos ---------- */
+.card {
+    background-color: #201b16;
+    border: 1px solid #3a3128;
+    border-top: 2px solid #c9812a;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: #c9812a;
+    box-shadow: 0 8px 22px rgba(201,129,42,0.25);
+}
+
+.card-text {
+    color: #a89e8d;
+    font-size: 0.95rem;
+}
+
+.card-img-top {
+    height: 220px;
+    object-fit: contain;
+    background-color: #0f0c0a;
+    padding: 10px;
+}
+
+/* Precio oferta/normal */
+.text-decoration-line-through {
+    opacity: 0.6;
+}
+
+/* Botones */
+.btn-primary {
+    background-color: #c9812a;
+    border-color: #c9812a;
+    color: #14110e;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: #f0b35c;
+    border-color: #f0b35c;
+    color: #14110e;
+}
+
+.btn-outline-light {
+    border-color: #c9812a;
+    color: #c9812a;
+}
+
+.btn-outline-light:hover {
+    background-color: #c9812a;
+    color: #14110e;
+}
+
+/* ---------- Carrito ---------- */
+#listaCarrito .list-group-item,
+.list-group-item {
+    background-color: #201b16;
+    border-color: #3a3128;
+    color: #d8d2c4;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    background: linear-gradient(0deg, #14110e 0%, #211c17 100%) !important;
+    color: #9a9184;
+    border-top: 1px solid #6b1e23;
+}
+
+footer a {
+    color: #c9812a !important;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #f0b35c !important;
+}
+
+.card-body {
+    color: #d8d2c4;
+}
+
+.card-body .text-muted {
+    color: #8a8275 !important;
+}
+
+.card-body .fw-bold {
+    color: #ffffff;
+}

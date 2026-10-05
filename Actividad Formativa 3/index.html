@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BonfireRest Videogames - React eCommerce</title>
+
+    <!-- Bootstrap 5 CSS vía CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Tipografías de la tienda -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- React monta toda la aplicación dentro de este div -->
+    <div id="root"></div>
+
+    <!-- React + ReactDOM (producción) -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+
+    <!-- Babel standalone: transpila JSX en el navegador.
+         IMPORTANTE: tanto estos scripts externos como el fetch()
+         de productos.json en App.js necesitan servidor (Live Server,
+         python -m http.server, o ya publicado en GitHub Pages) --
+         NO funciona con doble click (file://). -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- Componentes, en orden de dependencia. utils.js primero porque
+         Cart.js y ProductCard.js usan formatearPrecio(). -->
+    <script type="text/babel" src="utils.js"></script>
+    <script type="text/babel" src="Navbar.js"></script>
+    <script type="text/babel" src="ProductCard.js"></script>
+    <script type="text/babel" src="ProductList.js"></script>
+    <script type="text/babel" src="Cart.js"></script>
+    <script type="text/babel" src="Footer.js"></script>
+    <script type="text/babel" src="App.js"></script>
+</body>
+</html>

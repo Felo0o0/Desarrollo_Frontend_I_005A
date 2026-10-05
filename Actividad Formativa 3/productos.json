@@ -1,0 +1,26 @@
+[
+    {
+        "id": "ps5",
+        "nombre": "PlayStation 5",
+        "precioNormal": 549990,
+        "precioOferta": 449990,
+        "descripcion": "Consola de nueva generación con gráficos 4K y carga ultrarrápida.",
+        "imagen": "ps5.webp"
+    },
+    {
+        "id": "dualsense",
+        "nombre": "Control DualSense",
+        "precioNormal": 69990,
+        "precioOferta": 59990,
+        "descripcion": "Control inalámbrico con retroalimentación háptica y gatillos adaptativos.",
+        "imagen": "controller.webp"
+    },
+    {
+        "id": "pulse",
+        "nombre": "Audífonos Gamer Pulse",
+        "precioNormal": 64990,
+        "precioOferta": 54990,
+        "descripcion": "Sonido envolvente 3D ideal para partidas competitivas.",
+        "imagen": "headset.webp"
+    }
+]
